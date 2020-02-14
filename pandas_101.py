@@ -24,3 +24,7 @@ chlorides=wine.loc[:,'chlorides'] # all rows in the one column
 sulphurs=wine.loc[:,['free sulfur dioxide','total sulfur dioxide']] # all rows in the specified cols
 acid_data=wine.loc[:,'fixed acidity':'residual sugar'] # all rows from colx to coly
 print(wine.describe() )
+
+# task 5 combine data frames
+
+# task 6 save new dataframe to csv
