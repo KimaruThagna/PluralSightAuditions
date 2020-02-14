@@ -1,5 +1,5 @@
 import os
-from test_folder.utils import get_assignments, get_calls
+from test_folder.utils import get_calls
 import pandas_101
 import pandas as pd
 wine=pd.read_csv('data/winequality-red.csv', header=0)
@@ -15,7 +15,7 @@ def test_task3():
     assert pandas_101.shape == (1599,12) , 'The loaded CSV should have 12 columns and 1599 rows. Use the shape function like so::shape=wine.shape'
 
 def test_task4():
-    assert type(pandas_101.chlorides) == type(chloride_test), 'Have you selected all the rows of the chlorides column and named the variable chlorides?'
+    assert pandas_101.chlorides.shape == chloride_test.shape, 'Have you selected all the rows of the chlorides column and named the variable chlorides?'
 
 def test_task5():
     assert pandas_101.chlorides_mean == 0.08746654158849279, 'You can use the `wine.chlorides.mean()` call to calculate the correct mean. Assign answer to the variable chloride_mean'
