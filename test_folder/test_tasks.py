@@ -4,7 +4,7 @@ import pandas_101
 import pandas as pd
 wine=pd.read_csv('data/winequality-red.csv', header=0)
 chloride_test=wine.loc[:,'chlorides'] # all rows in the one column
-print(get_calls(pandas_101)[0])
+
 def test_task1():
     assert 'pd' in dir(pandas_101), 'Have you imported the`pandas` library with an alias as `pd`?'
 
