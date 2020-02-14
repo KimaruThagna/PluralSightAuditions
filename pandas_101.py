@@ -8,23 +8,17 @@ print(df.shape())
 
 df.dropna(axis=1, how='all') #remve all column where all value is 'NaN' exists
 df.dropna(axis=0, how='all') #remve all row where all value is 'NaN' exists
-# how=any
-df.dropna(thresh=2) #remve all row if there is non-'NaN' value is less than 2
-df.dropna(axis=0, subset=['A']) #remove row where if there is any 'NaN' value in column 'A'
-df.dropna(axis=1, subset=[1]) #remove column  if there is any 'NaN' value in index is '1'
 
 # task 3. read dataframe from CSV file
-
-wine=pd.read_csv('winequality-red.csv',header=0,delimiter=';')
+wine=pd.read_csv('data/winequality-red.csv', header=0)
 print(wine.head())
 
 # task 4. data access and dataframe slicing
 
 chlorides=wine.loc[:,'chlorides'] # all rows in the one column
 sulphurs=wine.loc[:,['free sulfur dioxide','total sulfur dioxide']] # all rows in the specified cols
+# task 5 access data in a set of columns
 acid_data=wine.loc[:,'fixed acidity':'residual sugar'] # all rows from colx to coly
-print(wine.describe() )
-
-# task 5 combine data frames
 
 # task 6 save new dataframe to csv
+df.to_csv('data/new_csv.csv')
