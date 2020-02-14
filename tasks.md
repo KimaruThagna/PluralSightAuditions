@@ -2,12 +2,10 @@
 This project will provide you a step-by-step guide to create a Python program to
  import pandas library and read an existing csv file, calculate the mean of a column and also, save a new csv file
 
-
-
 ## Task 1: Import pandas library as pd
 The library exists in the system after running pip3 install requirements.txt
 
-## Task 2:
+## Task 2: Read dataframe from CSV file
 There is a csv in the data folder called winequality-red.csv.
 The purpose of this task is to correctly read this file into a dataframe variable called wine using the pandas function read_csv()
 Since the header is the first row, in the function, set the header parameter to 0, header=0.

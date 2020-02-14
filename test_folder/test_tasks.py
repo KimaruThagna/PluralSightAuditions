@@ -1,4 +1,4 @@
-import pytest, os
+import os
 from test_folder.utils import get_assignments, get_calls
 import pandas_101
 import pandas as pd
