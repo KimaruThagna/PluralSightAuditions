@@ -13,3 +13,7 @@ df.dropna(thresh=2) #remve all row if there is non-'NaN' value is less than 2
 df.dropna(axis=0, subset=['A']) #remove row where if there is any 'NaN' value in column 'A'
 df.dropna(axis=1, subset=[1]) #remove column  if there is any 'NaN' value in index is '1'
 
+# task 3. read dataframe from CSV file
+
+wine=pd.read_csv('winequality-red.csv',header=0,delimiter=';')
+print(wine.head())
