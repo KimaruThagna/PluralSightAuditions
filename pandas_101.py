@@ -17,3 +17,10 @@ df.dropna(axis=1, subset=[1]) #remove column  if there is any 'NaN' value in ind
 
 wine=pd.read_csv('winequality-red.csv',header=0,delimiter=';')
 print(wine.head())
+
+# task 4. data access and dataframe slicing
+
+chlorides=wine.loc[:,'chlorides'] # all rows in the one column
+sulphurs=wine.loc[:,['free sulfur dioxide','total sulfur dioxide']] # all rows in the specified cols
+acid_data=wine.loc[:,'fixed acidity':'residual sugar'] # all rows from colx to coly
+print(wine.describe() )
